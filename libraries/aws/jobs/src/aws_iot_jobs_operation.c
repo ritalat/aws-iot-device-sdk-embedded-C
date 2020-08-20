@@ -540,7 +540,7 @@ AwsIotJobsError_t _AwsIotJobs_CreateOperation( _jobsOperationType_t type,
     {
         /* Ensure a valid Job ID is provided. */
         AwsIotJobs_Assert( pRequestInfo->pJobId != NULL );
-        AwsIotJobs_Assert( pRequestInfo->jobIdLength > 1 );
+        AwsIotJobs_Assert( pRequestInfo->jobIdLength > 0 );
         AwsIotJobs_Assert( pRequestInfo->jobIdLength <= JOBS_MAX_ID_LENGTH );
 
         operationSize += pRequestInfo->jobIdLength;
